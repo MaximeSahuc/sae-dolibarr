@@ -22,11 +22,11 @@
 
 ## Séance n° 3
 
-* date - heure
-* Travail effectué
-* A faire à la prochaine séance
-* Difficultés rencontrées
-* Remarques sur la séances (membre absent, pbe technique, ...)
+* 07/11/2024 - 8h30/19h
+* Installation manuelle de Dolibarr dans un container docker ubuntu.
+* Difficultés rencontrées : l'installation avec fichier deb ne semble pas fonctionnelle, le service n'est pas accessible.
+* Remarques sur la séances : perdu pas mal de temps sur l'installation dans une VM vagrant qui avais des soucis de réseaux, nous sommes finalement passés sur un container docker.
+* A faire à la prochaine séance : diviser le travail en 2 : l'un installe manuellement Dolibarr et note les étapes, l'autre commence à étudier l'import/export de donnés dans Dolibarr via requêtes SQL.
 
 
 
