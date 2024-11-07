@@ -1,0 +1,5 @@
+wget https://deac-riga.dl.sourceforge.net/project/dolibarr/Dolibarr%20installer%20for%20Debian-Ubuntu%20%28DoliDeb%29/20.0.1/dolibarr_20.0.1-4_all.deb
+
+dpkg -i dolibarr_*.deb
+
+apt-get install -f -y
