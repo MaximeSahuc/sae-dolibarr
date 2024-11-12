@@ -10,6 +10,7 @@ RUN apt-get update && apt-get upgrade -y \
     vim \
     git \
     wget \
+    iproute2 \
     && apt-get clean
 
 # Install Apache2
@@ -22,11 +23,16 @@ RUN apt install -y \
     php-mysql \
     libapache2-mod-php
 
+# Install MYSQL
+RUN apt install -y \
+    mysql-server
+
 # Enable Apache modules
 RUN a2enmod rewrite
 
-# Expose HTTP port
+# Expose HTTP and MySQL ports
 EXPOSE 80
+EXPOSE 3306
 
-# Start Apache
-CMD apache2ctl -D FOREGROUND
+# Start Apache and MySQL
+CMD service mysql start && apache2ctl -D FOREGROUND
