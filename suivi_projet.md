@@ -29,7 +29,20 @@
 * A faire à la prochaine séance : diviser le travail en 2 : l'un installe manuellement Dolibarr et note les étapes, l'autre commence à étudier l'import/export de donnés dans Dolibarr via requêtes SQL.
 
 
+## Séance n° 4
+
+* 12/11/2024 - 8h30/11h30
+* Travail effectué : création d'une image docker LAMP et début de l'installation manuelle de Dolibarr dans ce container
+* A faire à la prochaine séance : continuer l'installation manuelle de Dolibarr dans le container, et avancer sur les scripts d'import/exports de données.
+
+
+## Séance n° X
+
+* date - heure
+* Travail effectué
+* A faire à la prochaine séance
+* Difficultés rencontrées
+* Remarques sur la séances (membre absent, pbe technique, ...)
+
 
 ...
-
-
