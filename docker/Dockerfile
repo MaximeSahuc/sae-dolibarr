@@ -1,15 +1,26 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
-# Set environment variables to avoid interactive prompts during package installation
+# Set environment variables to avoid interactive prompts during installation
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y \
+# Necessary packages
+RUN apt-get update && apt-get upgrade -y \
+    && apt-get install -y \
     curl \
     vim \
     git \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
+    wget \
+    && apt-get clean
 
+# Install Apache2
+RUN apt install -y \
+    apache2
+
+# Enable Apache modules
+RUN a2enmod rewrite
+
+# Expose HTTP port
 EXPOSE 80
 
-CMD ["/bin/bash"]
+# Start Apache
+CMD apache2ctl -D FOREGROUND
