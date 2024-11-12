@@ -16,6 +16,12 @@ RUN apt-get update && apt-get upgrade -y \
 RUN apt install -y \
     apache2
 
+# Install PHP
+RUN apt install -y \
+    php \
+    php-mysql \
+    libapache2-mod-php
+
 # Enable Apache modules
 RUN a2enmod rewrite
 
