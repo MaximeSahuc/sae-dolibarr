@@ -36,6 +36,14 @@
 * A faire à la prochaine séance : continuer l'installation manuelle de Dolibarr dans le container, et avancer sur les scripts d'import/exports de données.
 
 
+## Séance n° 5
+
+* 14/11/2024 - 13h/16h
+* Travail effectué : Scripts d'installation de MySQL et Dolibarr avec un container ubuntu, l'installation fonctionne mais Dolibarr demande de configurer des choses manuellement. Script de dump de la base de donnée fait.
+* A faire à la prochaine séance : Script pour restorer Dolibarr depuis un dump de la BDD. Tester d'importer un dump dans l'image Docker custom pour essayer de bypass la configuration manuelle demandée.
+* Difficultés rencontrées : /
+
+
 ## Séance n° X
 
 * date - heure
