@@ -14,17 +14,17 @@ RUN apt-get update && apt-get upgrade -y \
     && apt-get clean
 
 # Install Apache2
-RUN apt install -y \
+RUN apt-get update && apt install -y \
     apache2
 
 # Install PHP
-RUN apt install -y \
+RUN apt-get update && apt install -y \
     php \
     php-mysql \
     libapache2-mod-php
 
 # Install PHP required extensions for Dolibarr
-RUN apt install -y \
+RUN apt-get update && apt install -y \
     php-mbstring \
     php-gd \
     php-curl \
@@ -34,10 +34,13 @@ RUN apt install -y \
     php-zip
 
 # Enable PHP extensions required by Dolibarr
+RUN echo -e "extension=mbstring\nextension=gd\nextension=curl\nextension=xml\nextension=intl\nextension=imap\nextension=zip" >> /etc/php/7.4/apache2/php.ini
 
+# Restart Apache2
+RUN service apache2 restart
 
 # Install MYSQL
-RUN apt install -y \
+RUN apt-get update && apt install -y \
     mysql-server
 
 # Enable Apache modules
