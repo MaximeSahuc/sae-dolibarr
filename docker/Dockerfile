@@ -23,6 +23,19 @@ RUN apt install -y \
     php-mysql \
     libapache2-mod-php
 
+# Install PHP required extensions for Dolibarr
+RUN apt install -y \
+    php-mbstring \
+    php-gd \
+    php-curl \
+    php-xml \
+    php-intl \
+    php-imap \
+    php-zip
+
+# Enable PHP extensions required by Dolibarr
+
+
 # Install MYSQL
 RUN apt install -y \
     mysql-server
@@ -30,9 +43,17 @@ RUN apt install -y \
 # Enable Apache modules
 RUN a2enmod rewrite
 
+# Configure MySQL
+COPY ./config_mysql.sh .
+RUN service mysql start && ./config_mysql.sh
+
+# Install Dolibarr
+COPY install_dolibarr.sh .
+RUN ./install_dolibarr.sh
+
 # Expose HTTP and MySQL ports
 EXPOSE 80
 EXPOSE 3306
 
-# Start Apache and MySQL
-CMD service mysql start && apache2ctl -D FOREGROUND
+# Start Apache
+CMD apache2ctl -D FOREGROUND
