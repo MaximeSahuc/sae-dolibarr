@@ -3,7 +3,7 @@
 cd /var/www/html
 
 # Get the application from git repository
-git clone --depth 1 -b 20.0 http://github.com/Dolibarr/dolibarr.git dolibarr
+git clone --depth 1 -b 20.0 https://github.com/Dolibarr/dolibarr.git dolibarr
 
 # Change permissions and owner of the 'dolibarr' directory
 chown -R www-data.www-data /var/www/html/dolibarr
