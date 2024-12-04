@@ -1,6 +1,7 @@
 services:
     mariadb:
         image: mariadb:latest
+        container_name: dolibarr_db_sae_cambonsahuc
         environment:
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
             MYSQL_DATABASE: ${MYSQL_DATABASE:-dolidb}
@@ -11,6 +12,7 @@ services:
 
     web:
         image: dolibarr/dolibarr:20.0.0
+        container_name: dolibarr_web_sae_cambonsahuc
         environment:
             WWW_USER_ID: ${WWW_USER_ID:-1000}
             WWW_GROUP_ID: ${WWW_GROUP_ID:-1000}
