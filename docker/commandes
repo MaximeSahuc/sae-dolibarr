@@ -1,0 +1,2 @@
+
+sudo docker exec nameofwebcontainer bash -c "rm -f /var/www/documents/install.lock"
