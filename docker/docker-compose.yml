@@ -27,3 +27,10 @@ services:
     volumes:
         - /config/dolibarr_documents:/var/www/documents
         - /config/dolibarr_custom:/var/www/html/custom
+    
+  adminer:
+    image: adminer
+    environment:
+        ADMINER_DEFAULT_SERVER: mariadb
+    ports:
+        - 8080:8080
