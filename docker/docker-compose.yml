@@ -29,7 +29,7 @@ services:
     volumes:
         - ./dolibarr_documents:/var/www/documents
         - ./dolibarr_custom:/var/www/html/custom
-        - ./csv_import:/root/csv_import
+        - ../csv_import:/root/csv_import
     
   adminer:
     image: adminer
