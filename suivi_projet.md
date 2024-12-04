@@ -44,6 +44,12 @@
 * Difficultés rencontrées : /
 
 
+TODO :
+- ping version MySQL, PHP
+- compresser dump mysql
+- cron job backup
+
+
 ## Séance n° X
 
 * date - heure
