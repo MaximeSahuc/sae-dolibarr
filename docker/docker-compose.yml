@@ -5,11 +5,14 @@ services:
         container_name: ubuntu-container
         ports:
         - "8080:80"
+        - "3306:3306"
         expose:
         - "3306"
         networks:
             custom_network:
                 ipv4_address: 172.69.0.10
+        volumes:
+          - "./backups/:/backups/"
 
 
 networks:

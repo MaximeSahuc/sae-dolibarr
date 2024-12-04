@@ -15,4 +15,4 @@ cd dolibarr ; touch htdocs/conf/conf.php ; chown www-data htdocs/conf/conf.php
 mkdir -p /var/lib/dolibarr/documents ; chown www-data /var/lib/dolibarr/documents
 
 # lock the call of the install process again
-touch /var/lib/dolibarr/documents/install.lock; chmod go-w /var/lib/dolibarr/documents
+# touch /var/lib/dolibarr/documents/install.lock; chmod go-w /var/lib/dolibarr/documents

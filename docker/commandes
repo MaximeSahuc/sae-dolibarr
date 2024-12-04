@@ -1,2 +1,20 @@
 
 sudo docker exec nameofwebcontainer bash -c "rm -f /var/www/documents/install.lock"
+
+
+/usr/bin/mysqldump dolibarr \
+    --protocol=tcp \
+    --single-transaction \
+    --quick \
+    --add-drop-table=TRUE \
+    --tables -c -e \
+    --hex-blob \
+    --default-character-set=utf8mb4 \
+    --no-tablespaces \
+    -ptoor | bzip2 > /backups/dump_database_$(date "+%Y%m%d").sql.bz2
+
+
+
+
+pour installer
+http://172.69.0.10/dolibarr/htdocs/

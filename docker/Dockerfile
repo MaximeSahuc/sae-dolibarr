@@ -59,4 +59,4 @@ EXPOSE 80
 EXPOSE 3306
 
 # Start Apache
-CMD apache2ctl -D FOREGROUND
+CMD service mysql start ; apache2ctl -D FOREGROUND
