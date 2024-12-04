@@ -6,7 +6,6 @@ services:
             MYSQL_DATABASE: ${MYSQL_DATABASE:-dolidb}
             MYSQL_USER: ${MYSQL_USER:-dolidbuser}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD:-dolidbpass}
-
         volumes:
             - ./dolibarr_mariadb:/var/lib/mysql
 
@@ -24,12 +23,10 @@ services:
             DOLI_ADMIN_PASSWORD: "${DOLI_ADMIN_PASSWORD:-admin}"
             DOLI_CRON: ${DOLI_CRON:-0}
             DOLI_INIT_DEMO: ${DOLI_INIT_DEMO:-0}
-            DOLI_COMPANY_NAME: ${DOLI_COMPANY_NAME:-MyBigCompany}
-
+            DOLI_COMPANY_NAME: ${DOLI_COMPANY_NAME:-MegCorp}
         ports:
             - "80:80"
         links:
             - mariadb
         volumes:
-            - ./dolibarr_documents:/var/www/documents
-            - ./dolibarr_custom:/var/www/html/custom
+            - ./dolibarr_backups:/backups
