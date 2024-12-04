@@ -46,7 +46,7 @@
 
 ## Séance n° 6
 
-* 04/12/2024 - 8h30/16h
+* 04/12/2024 - 8h30/19h
 * Travail effectué : Refacto du script de dump de la DB Dolibarr. Travail sur l'import de données CSV dans Dolibarr. Commencement du rapport technique et script de restauration de base de données.
 * A faire à la prochaine séance : Rapport, script d'import CSV, script de restauration, crontab pour sauvegardes quotidiennes.
 * Difficultés rencontrées : Notre première approche avec un Dockerfile custom ubuntu et des scripts d'installation de Dolibarr n'a pas été concluante. Nous avons donc pris la décision de partir sur l'image Docker fournie par Dolibarr afin d'avoir une version fonctionnelle.
@@ -60,7 +60,8 @@ Checklist avant rendu :
 - import via CSV
 - crontab dump automatique
 
-
+TODO :
+- script dump DB : argument pour la compression
 
 ## Séance n° X
 
