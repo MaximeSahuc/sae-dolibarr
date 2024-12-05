@@ -52,6 +52,14 @@
 * Difficultés rencontrées : Notre première approche avec un Dockerfile custom ubuntu et des scripts d'installation de Dolibarr n'a pas été concluante. Nous avons donc pris la décision de partir sur l'image Docker fournie par Dolibarr afin d'avoir une version fonctionnelle.
 
 
+## Séance n° 7
+
+* 05/12/2024 - 13h/16h
+* Travail effectué : Compte rendu, script de restauration de la database fini, script d'import de données CSV fonctionnel avec le bon format uniquement.
+* A faire à la prochaine séance : Script pour formater les données CSV au bon format.
+* Difficultés rencontrées : /
+
+
 Checklist avant rendu :
 - dolibarr fonctionnel
 - dolibarr préconfiguré dès le 1er lancement
