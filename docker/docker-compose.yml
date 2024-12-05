@@ -7,6 +7,7 @@ services:
             MYSQL_DATABASE: ${MYSQL_DATABASE:-dolidb}
             MYSQL_USER: ${MYSQL_USER:-dolidbuser}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD:-dolidbpass}
+        env_file: default.env
         volumes:
             - ./dolibarr_mariadb:/var/lib/mysql
 
@@ -25,7 +26,8 @@ services:
             DOLI_ADMIN_PASSWORD: "${DOLI_ADMIN_PASSWORD:-admin}"
             DOLI_CRON: ${DOLI_CRON:-0}
             DOLI_INIT_DEMO: ${DOLI_INIT_DEMO:-0}
-            DOLI_COMPANY_NAME: ${DOLI_COMPANY_NAME:-MegCorp}
+            DOLI_COMPANY_NAME: ${DOLI_COMPANY_NAME:-Company}
+        env_file: default.env
         ports:
             - "80:80"
         links:
