@@ -50,7 +50,7 @@ sudo docker exec \
         --hex-blob \
         --default-character-set=utf8mb4 \
         --no-tablespaces $COMPRESS_FLAG > /backups/$FILENAME" \
-    && echo "Success: saved file to $FILENAME" || echo "Error: dump failed!"
+    && echo "Success: Saved file to $FILENAME" || echo "Error: Dump failed!"
 
 
 ##############################################################
