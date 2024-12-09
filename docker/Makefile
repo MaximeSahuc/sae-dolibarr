@@ -16,3 +16,9 @@ rm:
 	docker compose down
 	docker compose rm
 	sudo rm -fr dolibarr_mariadb
+
+install:
+	@echo ""
+	@echo "Installing Dolibarr ..."
+	mkdir dolibarr_mariadb
+	make build_run
