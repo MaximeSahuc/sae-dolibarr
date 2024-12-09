@@ -6,27 +6,30 @@
 - [Procédure de sauvegarde & restauration](./documentation/procedure_sauvegarde_restauration.md)
 - [Procédure d'import de données CSV](./documentation/import_donnee_csv.md)
 
-### Test du POC
+### Tests
 
-La démarche à suivre pour mettre en place le POC.
+Il y a deux possibilités pour installer le projet:
 
-1) Lancer la première installation et vérifier que l'instance Dolibarr vierge est bien fonctionnel: [première installation](./documentation/procedure_premiere_install.md)
-2) Importer le dump SQL fourni "dump_test.sql" et vérifier la présence des données:  [Restauration](./documentation/procedure_sauvegarde_restauration.md)
-3) Importer le fichier CSV fourni "test_users.csv" et vérifier la présence des données dans Dolibarr:  [import CSV](./documentation/import_donnee_csv.md)
-4) Réaliser une sauvegarde des données et supprimer les containers:   [Sauvegarde](./documentation/procedure_sauvegarde_restauration.md) & [Suppression](./documentation/procedure_premiere_install.md)
-5) Réimporter le dump réalisé précédemment et vérifié la persistance des données:   [Restauration](./documentation/procedure_sauvegarde_restauration.md)
+- Lancer le script "install.sh" et utiliser Dolibarr avec des données de test
+
+```bash
+cd scripts
+./install.sh
+```
+
+Y importer le fichier CSV fourni "test_users.csv" et vérifier la présence des données dans Dolibarr
+Réaliser une sauvegarde des données et supprimer les containers
+Réimporter le dump réalisé précédemment et vérifié la persistance des données
+
+- Suivre la procédure permettant de montrer le POC dans sa totalité:  [Procédure POC](./documentation/procedure_POC.md)
+
+
 
 ### Description du projet
 
 Le but de cette SAE est de mettre en place l'ERP Dolibarr sous Docker et créer des scripts pour faciliter son déploiement et la sauvegarde de l'ERP.
 
-TODO
-- S'intéresser au projet Dolibarr: origine, développement, 
-qui-quoi-quand, rythme de release, communauté, évolutions, forums 
-(activité?), sociétés fournissant du support, etc.
-Points forts/points faible.
-Concurrence? (projets libres similaires et/ou produits commerciaux)
-Et rédiger un CR sur tout ça.
+Dolibarr est un ERP open source lancé en 2003, conçu pour les petites et moyennes entreprises. Il permet de gérer des fonctions variées comme la comptabilité et les ventes, avec une interface modulaire. Bien que gratuit, il offre des services de support payants via des sociétés partenaires. Ses points forts incluent sa flexibilité et sa simplicité, mais son interface peut sembler vieillotte. Face à des concurrents comme **Odoo** ou **ERPNext**, Dolibarr reste une option économique, bien qu'il soit moins sophistiqué.
 
 
 ### Solution
@@ -130,11 +133,10 @@ Le fichier dump étant créé par l'utilisateur `root` du conteneur, il est néc
 
 #### Étapes > Script de restauration
 
-TODO
+Le script de restauration permet de résinsérer les données d'un dump SQL précédent.
+Le script est configurables à l'aide de variables pour définir, le user, password, database, compression du fichier, etc.
 
-**Fonctionnement :** TODO
-
----
+**Fonctionnement :** Le script est à lancer depuis la machine hôte et se connectera au conteneur Dolibarr web pour lancer la commande de d'ajout des données à la base de donnée.
 
 
 #### Étapes > Script d'import de données
