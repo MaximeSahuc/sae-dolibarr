@@ -60,24 +60,9 @@
 * Difficultés rencontrées : /
 
 
-Checklist avant rendu :
-- dolibarr fonctionnel
-- dolibarr préconfiguré dès le 1er lancement
-- dump de DB
-- restauration de la DB
-- import via CSV
-- crontab dump automatique
+## Séance n° 8
 
-TODO :
-- script dump DB : argument pour la compression
-
-## Séance n° X
-
-* date - heure
-* Travail effectué
-* A faire à la prochaine séance
-* Difficultés rencontrées
-* Remarques sur la séances (membre absent, pbe technique, ...)
-
-
-...
+* 09/11/2024 - 16h-19h
+* Travail effectué : Documentation, script d'import depuis fichier CSV fonctionnel, refacto de l'arbo du projet.
+* A faire à la prochaine séance : /
+* Difficultés rencontrées : les données importées dans la DB depuis le script ne s'affichaient pas dans Dolibarr, nous avons donc pris l'approche d'utiliser l'API Dolibarr pour insérer les données.
