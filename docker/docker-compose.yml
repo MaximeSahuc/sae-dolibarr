@@ -31,5 +31,5 @@ services:
         links:
             - mariadb
         volumes:
-            - ./dolibarr_backups:/backups
-            - ../csv_import:/root/csv_import
+            - ../backups:/backups
+            - ../imports:/root/csv_import
