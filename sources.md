@@ -18,6 +18,9 @@ https://wiki.dolibarr.org/index.php?title=Module_Imports
 Module exports:
 https://wiki.dolibarr.org/index.php?title=Module_Exports_En
 
+API Dolimport:
+https://wiki.dolibarr.org/index.php?title=Module_Dolimport
+
 ---
 
 ### BACKUP / RESTORE via SQL DUMP
@@ -40,3 +43,7 @@ doc : https://wiki.dolibarr.org/index.php?title=Installation_-_Upgrade#With_Doli
 
 ### LAMP install
 tuto : https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu
+
+
+### Create user via API
+http://0.0.0.0/api/index.php/explorer/#!/users/createUsers
