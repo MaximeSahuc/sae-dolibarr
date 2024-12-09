@@ -1,5 +1,20 @@
 # SAE Dolibarr
 
+### Procédures
+
+- [Procédure de première installation](./documentation/procedure_premiere_install.md)
+- [Procédure de sauvegarde & restauration](./documentation/procedure_sauvegarde_restauration.md)
+- [Procédure d'import de données CSV](./documentation/import_donnee_csv.md)
+
+### Test du POC
+
+La démarche à suivre pour mettre en place le POC.
+
+1) Lancer la première installation et vérifier que l'instance Dolibarr vierge est bien fonctionnel: [première installation](./documentation/procedure_premiere_install.md)
+2) Importer le dump SQL fourni "dump_test.sql" et vérifier la présence des données:  [Restauration](./documentation/procedure_sauvegarde_restauration.md)
+3) Importer le fichier CSV fourni "test_users.csv" et vérifier la présence des données dans Dolibarr:  [import CSV](./documentation/import_donnee_csv.md)
+4) Réaliser une sauvegarde des données et supprimer les containers:   [Sauvegarde](./documentation/procedure_sauvegarde_restauration.md) & [Suppression](./documentation/procedure_premiere_install.md)
+5) Réimporter le dump réalisé précédemment et vérifié la persistance des données:   [Restauration](./documentation/procedure_sauvegarde_restauration.md)
 
 ### Description du projet
 
@@ -168,7 +183,11 @@ Nous avons construits nos scripts de manière à être executés en dehors du co
 
 ---
 
-#### Choix technique X
+#### Script import de donnée CSV
+
+Initialement nous avons choisi de faire des requêtes SQL pour importer les données dans la BDD. Les données étaient bien insérées dans la BDD mais n'apparaissaient pas dans Dolibarr.
+Nous avons ensuite fait des tests d'insetion de données via l'API. Ces derniers ayant été concluants nous avons garder cette méthode. 
+
 
 
 
@@ -194,3 +213,10 @@ TODO
 pouvez-vous utiliser? Quel "prompt" avez-vous donné? quel résultat? 
 quelles limitations? Quelle pertinence?
 Et rédiger un CR la-dessus.
+
+### Point d'améliorations
+
+- Mettre le choix de la compression ou non en argument du script "dump_database.sh" plutôt que de devoir  modifier la valeur de la variable dans le script.
+
+- Un cron job qui lancera une backup quotidienne de la BDD.
+ 
