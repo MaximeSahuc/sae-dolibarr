@@ -1,8 +1,21 @@
 # Procédure de première installation
 
-## Modifier le fichier default.env
+## Déploiement du projet avec le docker compose
 
-Le fichier .env permet de paramètrer les configurations de base comme les indentifiants de connexions, le nom de l'entreprise et l'URL.
+```bash
+cd docker
+make install
+```
+
+Se connecter et vérifier : http://localhost:80/
+<br>
+Login: `admin`
+<br>
+Password: `sae52`
+
+## Modifier le fichier default.env (si besoin)
+
+Le fichier .env permet de paramétrer les configurations de base comme les identifiants de connexions, le nom de l'entreprise et l'URL.
 
 ```
 DOLI_ADMIN_LOGIN=admin
@@ -11,31 +24,25 @@ DOLI_COMPANY_NAME=MegCorporation
 DOLI_URL_ROOT=http://0.0.0.0
 DOLI_INIT_DEMO=0
 ```
-Il est possible d'activer un mode de demo en mettant la variable DOLI_INIT_DEMO=1 cela activera des modules et insérera des données de test.
+Il est possible d'activer un mode de démo en mettant la variable DOLI_INIT_DEMO=1 cela activera des modules et insérera des données de test.
 
-## Déploiment du projet avec le docker compose
-
-```bash
-cd docker
-make
-```
 
 ## Utilisation
 
-Se connecter a l'interface web à l'URL défini dans le fichier default.env
+Se connecter a l'interface web à l'URL définie dans le fichier default.env
 
-Dans ce cas Dolibarr sera vierge et nécessitera d'être configuré
+Dans ce cas, Dolibarr sera vierge et nécessitera d'être configuré
 
 ## Arrêt & Suppression
 
-Les contenneurs peuvent-être arrêtés avec la commandes suivantes:
+Les conteneurs peuvent être arrêtés avec la commande suivante:
 
 ```bash
 cd docker
 make down
 ```
 
-Pour arrêter les conteneurs et supprimer tout les fichiers de Dolibarr:
+Pour arrêter les conteneurs et supprimer tout les fichiers de Dolibarr (sauf backup et imports):
 
 ```bash
 cd docker
