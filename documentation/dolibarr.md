@@ -1,4 +1,4 @@
-## Documentation Dolibarr
+## Documentation
 
 https://wiki.dolibarr.org/index.php?title=Home
 
